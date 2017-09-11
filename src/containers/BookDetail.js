@@ -6,13 +6,13 @@ class BookDetail extends Component {
   render() {
     if(!this.props.book) {
       return (
-        <div>Select a book to get started!</div>
+        <div className="getStarted">Select a book to get started!</div>
       )
     }
     return (
-      <div className="col-md-4">
+      <div className="col-md-6">
         <h3> Details for: </h3>
-        <h4 className="title">{this.props.book.title}</h4>
+        <h4 className="title"><em>{this.props.book.title}</em></h4>
         <div>{this.props.book.pages} pages</div>
         <div>Author: {this.props.book.author}</div>
         <div>Price: ${this.props.book.price} USD</div>
